@@ -30,7 +30,7 @@
         //second method same out come
         let ValueII = 1;
 
-        IncII = ValueII++;
+        IncII = ++ValueII;
 
         Incrament = [Inc, IncII];
 
@@ -41,8 +41,11 @@
         
         //second method same out come
         let ValueIV = 3;
+        
+        let DecII = --ValueIV;
+        
 
-        DecII = ValueIV--;
+
 
 
 
