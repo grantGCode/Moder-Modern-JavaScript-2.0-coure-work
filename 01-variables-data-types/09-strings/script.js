@@ -34,4 +34,42 @@ e = myString[2];
 console.log("Using the [] I was able to pull value 2 from my string seen here =", e);
 
 
+f = myString.__proto__;
+
+// To change the case of the String
+
+g = myString.toUpperCase();
+
+h = myString.toLowerCase();
+
+
+i = myString.charAt(0);
+
+j = myString.indexOf('d');
+
+k = myString.substring(0, 4);
+
+l = myString.substring(7);
+
+m = myString.slice(-11, -6);
+
+let myString2 = "         Hello World";
+//Triming Strings white space
+n = myString2.trim();
+
+console.log(n);
+
+//replacing words in Strings
+
+o = myString.replace("World", "Grant");
+
+// includes() methote will return True or False 
+
+    p = myString.includes(Hello); // will return true
+    console.log('Hello = ', p)
+
+    q = myString.includes(Helli); // will return false
+    console.log('Helli = ', q);
+
+
 
