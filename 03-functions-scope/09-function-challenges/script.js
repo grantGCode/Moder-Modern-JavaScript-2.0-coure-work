@@ -19,3 +19,12 @@ const minMax = (arr) => {
 }
 
 console.log(minMax([1, 2, 3, 4, 5]));
+
+// Chalange 3
+
+( function (L, W){
+    const area = L * W;
+    console.log(`The area of a rectangle with a with of ${L} and a width of ${W} is ${area}.`);
+})(10, 5);
+
+
