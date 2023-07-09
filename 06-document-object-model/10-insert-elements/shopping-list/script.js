@@ -32,13 +32,25 @@ function insertHTML() {
 
 function insertBeforeItem() {
 
+  const ul = document.querySelector('ul'); // Parent
+
+  const li = document.createElement('li'); // The list item to inset
+  li.textContent = 'insertBefore';
+
+  const thirdItem = document.querySelector('li:nth-child(3)');// Item adjacent to where I want to insert the list item
+
+  /* adding buttion */
+  // const button = createButtion('remove-item btn-link text-red');
+  // li.appendChild(button); 
   
+  ul.insertBefore(li, thirdItem); 
 }
 
 
 insertElement();
 insertText();
 insertHTML();
+insertBeforeItem();
 /*
 <!-- beforebegin -->
 <p>
