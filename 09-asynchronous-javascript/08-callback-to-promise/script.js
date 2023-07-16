@@ -8,13 +8,14 @@ function createPost(post) {
   return new Promise((resolve, reject) => {
   setTimeout(() => {
    posts.push(post);
-    let error = false;
+    let error = false;//Change to true to check reject and showError function is working
 
     if(!error) {
       posts.push(post);
       resolve();
     }else{
       reject('Something went wrong');
+
     }
   })
   
@@ -34,7 +35,10 @@ function getPosts() {
 function showError(error) {
 const h3 = document.createElement('h3');
 h3.innerHTML = `<strong>${error}</strong>`;
+h3.style.fontStyle = 'italic'
+h3.style.color ='red'
 document.getElementById('posts').appendChild(h3);
+
 }
 
-createPost({ title: 'Post Three', body: 'This is post' }).then(getPosts);
+createPost({ title: 'Post Three', body: 'This is post' }).then(getPosts).catch(showError);
