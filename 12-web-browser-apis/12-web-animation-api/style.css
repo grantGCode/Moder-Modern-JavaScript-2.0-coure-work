@@ -53,7 +53,7 @@ button:hover {
   background: blue;
 }
 
-@keyframes roll {
+/*@keyframes roll {
   0% {
     transform: rotate(0) translate3D(-50%, -50%, 0);
     color: white;
