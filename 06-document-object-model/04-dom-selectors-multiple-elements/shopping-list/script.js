@@ -1,45 +1,77 @@
 // querySelectorAll()
 
-const listItems = document.querySelectorAll('.item') // Selects all list items
- console.log(listItems[1].innerText); // retuning second li
+/* .querySelectorAll() selects all <li> elements. */
 
-listItems[1].style.color = 'red';// Changing the second li to red
+const listItems = document.querySelectorAll('.item') 
+console.log(listItems)
+/* Logging the listItems to the console will return a Node list.
+A Node list is an array like structure and this Node list is 
+returning an array structure of <li> in the app's HTML page. */
+
+ console.log(listItems[1].innerText); // Here I'm retuning the second <li>.
+
+listItems[1].style.color = 'red';// Here I'm changing the second <li> to red.
 
 listItems.forEach((items) => {
     items.style.color = 'red';
-}); // Changing all li to red
-
-
+}); 
+/* Now I'm using a forEach() to changing all the <li> to red
+on lines 15 - 17. */
+/* commented out lines 21 -34 */
 // listItems.forEach((items, index) => {
 //     items.style.color = 'red';
 
 //     if (index === 1) {
 //         items.remove();
-//     } // removes second list item
+//     } 
+    /* removes second list item */
 
 //     if (index === 0) {
 //         items.innerHTML = `Oranges <button class="remove-item btn-link text-red">
 //         <i class="fa-solid fa-xmark"></i>
 //       </button>`; 
-//     } // Changes first li list item to Oranges 
-//     /* In the first li there is a button element in the content changing the list item to Oranges removed he buttion
-//     to add back the buttion us change innerText to innerHTML and a templet string and past the button element in. */
+//     } 
 // });
+    /* Here I am changing the first <li> to Oranges on Lines: 29 -34.
+        NOTE:
+            In the first <li> there is a <button> in the <li> changing the <li> text content to "Oranges" removed the <button>
+            to prevent this and add back the <button> instead of using innerText.
+            Use innerHTML and a template strings and past the button element in. 
+            to prevent the DOM from removing the element after changing it.
+    */
+
+// Selecting all elements by className
 
 const listItems2 = document.getElementsByClassName('item');
 
-console.log(listItems2[2].innerText);
+console.log(listItems2);
+/* Logging with getElementsByClassName() to the console will 
+return an HTMLCollection array list than a Node list array.
+ */
+console.log(listItems2[2]); // I can still us indexes to grab individual elements.
+console.log(listItems2[2].innerText);// This will return the text content of <li> 3.
 
-const listItemsArray = Array.from(listItems2);
 
 /* listItems2.forEach((item) => {
     console.log(item.innerText);
-});*/ // Will Return an error because list items 2 is not a function it is an HTML collection
+    });*/ 
+    /* Lines: 56 - 58. Will Return an error because listItems2 is
+    not a function because it's not and array it's an HTML collection */
+    
+const listItemsArray = Array.from(listItems2);
+/* Changing listItems2 to an Array with Array.from 
+will get it the .forEach() to work. */ 
+
 
 listItemsArray.forEach((item) => {
     console.log(item.innerText);
-}); // I had to change listItems2 to an Array to get it to work with Array.from
+}); 
 
 const listItems3 = document.getElementsByTagName('li');
+/* .getElementsByTagName() will select elements by tag name*/
 
-console.log(listItems3[0].innerText);
+console.log(listItems3); // Returns another HTML Collection
+console.log(listItems3[0]);// Retuning one of multiple elements using indexes.
+console.log(listItems3[0].innerText); // This will return the text content of <li> 0.
+
+// Gist for most cases it generally best to stick with querySelectorAll()
