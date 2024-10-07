@@ -1,5 +1,5 @@
 /* 
-  Code from Lines 5 - 19 is the clean function copied over from last Module.
+  Code from Lines 6 - 20 is the clean function copied over from last Module.
   This function is a single function that does one thing / action.
   This function Creates all 3 elements for the shopping list.
 */
@@ -26,11 +26,12 @@ function createNewItemV1(item) {
   This format it optional and ether element is up to developer preference as to which to uses.
 */
 
+// This function will create the new <li> to be added to the shopping list.
 function createNewItemV2(item) {
   const li = document.createElement('li'); // create <li> element.
   li.appendChild(document.createTextNode(item)); // appending textNode to <li>
 
-  const button = createButton('remove-item btn-link text-red');// calling createButton() function on line 29 - 37.
+  const button = createButton('remove-item btn-link text-red');// calling createButton() function on line 30 - 38.
   li.appendChild(button); // Appending the <button> to the <li>.
   
   document.querySelector('.items').appendChild(li); // appending <li> to the <ul> / Shopping list.
@@ -42,7 +43,7 @@ function createButton(classes) {
   const button = document.createElement('button'); // create <button> element.  
   button.className = classes; // add class to <button>
   
-  const icon = createIcon('fa-solid fa-xmark'); // calling createIcon() function on line 53 - 57.
+  const icon = createIcon('fa-solid fa-xmark'); // calling createIcon() function on line 54 - 58.
   button.appendChild(icon); // Appending the <i> to the button.
   
   return button; // retuning the new <button>.
@@ -56,5 +57,5 @@ function createIcon(classes) {
   return icon; // Returning new <i> element.
 };
 
-createNewItemV1('Cheese');
-createNewItemV2('Sauce');
+createNewItemV1('Cheese'); // Calling the one function on lines 6 - 20.
+createNewItemV2('Sauce'); // Calling all the 3 functions on lines 30 -58.
