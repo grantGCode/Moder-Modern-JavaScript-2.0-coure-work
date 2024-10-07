@@ -26,6 +26,8 @@ function replaceFirstItem() {
 
 replaceFirstItem();
 
+
+
 function replaceSecondItem() {
     const secondItem = document.querySelector('li:nth-child(2)');
 
