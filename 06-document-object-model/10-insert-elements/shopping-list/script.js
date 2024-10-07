@@ -39,8 +39,8 @@ function insertBeforeItem() {
 
   const thirdItem = document.querySelector('li:nth-child(3)');// Item adjacent to where I want to insert the list item
 
-  /* adding buttion */
-  // const button = createButtion('remove-item btn-link text-red');
+  /* adding button */
+  // const button = createButton('remove-item btn-link text-red');
   // li.appendChild(button); 
   
   ul.insertBefore(li, thirdItem); 
