@@ -1,12 +1,12 @@
 function replaceFirstItem() {
-    const firstItem = document.querySelector('li:nth-child(1)');
+    const firstItem = document.querySelector('li:nth-child(1)'); // Step 1 select element
 
-    const li = document.createElement('li');
+    const li = document.createElement('li'); // Set 2 create new element to insert in place of previous element.
     li.textContent = 'Replaced First';
 
-    /* adding buttion */
+    /* adding button */
     
-        // function createButtion(classes) {
+        // function createButton(classes) {
         //     const button = document.createElement('button');
         //     button.className = classes;
             
@@ -17,11 +17,11 @@ function replaceFirstItem() {
             
         // }
         
-        // const button = createButtion('remove-item btn-link text-red');
+        // const button = createButton('remove-item btn-link text-red');
         // li.appendChild(button);
     
     
-    firstItem.replaceWith(li);
+    firstItem.replaceWith(li); // Final Step use replaceWith() method to replace the old element with the new element. 
 }
 
 replaceFirstItem();
@@ -42,7 +42,7 @@ function replaceAllItems() {
     newLis.forEach((item, index) => {
         //item.outerHTML = '<li>Replaced All Elements</li>'; //outerHTML method
         
-        // forEach mthold with 1 index = Second Item
+        // forEach method with 1 index = Second Item
             /* newLis.forEach((item, index) => {
                 if( index === 1) {
                     item.innerHTML = 'Second Item';
@@ -64,8 +64,8 @@ replaceAllItems();
 
 
 function replaceChildHeading() {
-    const header = document.querySelector('header'); // Selceing the parent element of <header></header>
-    const h1 = document.querySelector('header h1'); // Selcet the child element of <h1>Shopping List</h1>
+    const header = document.querySelector('header'); // Selecting the parent element of <header></header>
+    const h1 = document.querySelector('header h1'); // Select the child element of <h1>Shopping List</h1>
 
     const h2 = document.createElement('h2');
     h2.id = 'app-title';
