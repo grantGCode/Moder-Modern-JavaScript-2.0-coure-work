@@ -20,3 +20,6 @@ function calculator(num1, operator, num2) {
 }
 
 calculator(5, '+', 2);
+calculator(5, '-', 2);
+calculator(5, '*', 2);
+calculator(10, '/', 2);
