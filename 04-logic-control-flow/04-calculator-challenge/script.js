@@ -1,22 +1,22 @@
-function calculator(num1, num2, operator) {
-   let awnser
+function calculator(num1, operator, num2) {
+   let answer;
         switch (operator) {
         case '+':
-            awnser =  num1 + num2;
+            answer =  num1 + num2;
             break;
         case '-':
-            awnser = num1 - num2;
+            answer = num1 - num2;
             break;
         case '*':
-            awnser = num1 * num2;
+            answer = num1 * num2;
             break;
         case '/':
-            awnser = num1 / num2;
+            answer = num1 / num2;
             break;
         default: 'error not correct syntax'
-    }
+    };
         
-    console.log(awnser);
+    console.log(answer);
 }
 
-calculator(5, 2, '+');
+calculator(5, '+', 2);
